@@ -19,13 +19,16 @@ Sistema web completo para gestão hoteleira, desenvolvido em **ASP.NET Core MVC*
 *(Para adicionar as fotos aqui, basta arrastar e soltar as imagens do seu computador para dentro deste editor durante a edição do README no GitHub!)*
 
 ### 1. Tela de Acesso
-> Arraste a foto da tela de Login aqui
+<img width="1901" height="1076" alt="Tela de Login" src="https://github.com/user-attachments/assets/c327dc45-34d9-4f49-9c34-31347bc5d79c" />
+
 
 ### 2. Painel Inicial
-> Arraste a foto da Tela Inicial / Dashboard aqui
+<img width="1919" height="1079" alt="Tela-Inicial" src="https://github.com/user-attachments/assets/f77ec402-2ff7-4d4f-8363-ba7c7c3859f2" />
+
 
 ### 3. Gerenciamento de Hóspedes
-> Arraste a foto da Tabela de Hóspedes aqui
+<img width="1919" height="1079" alt="Tabela de Hospedes" src="https://github.com/user-attachments/assets/032584a6-4109-4254-b513-5a8cfe28f4bb" />
+
 
 ---
 
