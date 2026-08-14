@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Hotel Primavera</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="bg-white d-flex flex-column min-vh-100">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm border-bottom">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-primary" asp-controller="Home" asp-action="Index">
+                    Hotel Primavera
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1 ms-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-semibold" asp-controller="Home" asp-action="Index">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" asp-controller="Hospede" asp-action="Index">Hóspedes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" asp-controller="Quarto" asp-action="Index">Quartos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" asp-controller="Servico" asp-action="Index">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" asp-controller="Funcionario" asp-action="Index">Funcionários</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav align-items-center">
+                        @if (Context.Session.GetString("Usuario") != null)
+                        {
+                            <li class="nav-item me-3 text-dark small">
+                                @Context.Session.GetString("Usuario")
+                            </li>
+                        }
+                        <li class="nav-item">
+                            <a class="btn btn-outline-danger btn-sm rounded-pill px-3" asp-controller="Account" asp-action="Logout">
+                                Sair
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container my-4 flex-grow-1">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
